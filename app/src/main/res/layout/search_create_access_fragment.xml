@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginAccessFragment">
+
+    <data>
+        <variable
+            name="searchViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.SearchViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/home_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+
+    <LinearLayout
+        android:id="@+id/PrimaryLayout"
+        android:layout_width="407dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+        <Button
+            android:id="@+id/AddInMatchButton"
+            android:layout_width="48sp"
+            android:layout_height="48sp"
+            android:layout_marginTop="11sp"
+            android:layout_marginStart="15sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="15sp"
+            android:background="@drawable/ic_add"
+            android:textSize="20sp"
+            app:backgroundTint="@null"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <View
+            android:layout_width="240sp"
+            android:layout_height="2sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20sp"
+            android:background="#000000" />
+
+        <Button
+            android:id="@+id/FilterInMatchButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="15sp"
+            android:background="@drawable/ic_filter"
+            android:textSize="20sp"
+            app:backgroundTint="@null"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SearchtListView"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_height="635dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PrimaryLayout" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

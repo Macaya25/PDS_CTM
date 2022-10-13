@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:id="@+id/menu_filter"
+        android:layout_width="357dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_corner_2"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="10sp"
+            android:text="@string/text_location"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeStepGranularity="1sp" />
+
+        <EditText
+            android:id="@+id/editTextlocation"
+            android:layout_width="319dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:autofillHints=""
+            android:background="@drawable/round_corner"
+            android:ems="10"
+            android:hint="@string/text_location_match"
+            android:inputType="textEmailAddress"
+            android:minHeight="4dp"
+            android:paddingHorizontal="12sp"
+            android:paddingVertical="10sp"
+            android:textColorHint="#006064"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintBottom_toTopOf="@+id/loginTitleGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLocation"
+            app:layout_constraintVertical_bias="0.031"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:text="@string/text_day"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeStepGranularity="1sp" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:autofillHints=""
+            android:background="@drawable/round_corner"
+            android:ems="10"
+            android:hint="@string/text_day_match"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:paddingHorizontal="12sp"
+            android:paddingVertical="10sp"
+            android:textColorHint="#006064"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintBottom_toTopOf="@+id/loginTitleGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textHour"
+            app:layout_constraintVertical_bias="0.031" />
+
+        <Button
+            android:id="@+id/FilterToMenuButton"
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:drawableStart="@drawable/round_corner"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeStepGranularity="1sp"
+            android:text="@string/filtrar" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

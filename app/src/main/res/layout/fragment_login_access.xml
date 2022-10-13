@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginAccessFragment">
+
+    <data>
+        <variable
+            name="loginViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/LoginFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textTitleLogin"
+            android:layout_width="225sp"
+            android:layout_height="86sp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_horizontal"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="31sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="60sp"
+            android:autoSizeStepGranularity="1sp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/loginButtonGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.22" />
+
+        <TextView
+            android:id="@+id/textMail"
+            android:layout_width="225sp"
+            android:layout_height="40sp"
+            android:layout_margin="10sp"
+            android:layout_marginTop="55sp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="start"
+            android:text="@string/mail"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButtonGuideline" />
+
+        <EditText
+            android:id="@+id/editTextMail"
+            android:layout_width="351sp"
+            android:layout_height="52sp"
+            android:layout_margin="15sp"
+            android:autofillHints=""
+            android:background="@drawable/round_corner"
+            android:ems="10"
+            android:text="@={loginViewModel.emailLiveData}"
+            android:hint="@string/example_mail"
+            android:inputType="textEmailAddress"
+            android:minHeight="48sp"
+            android:paddingHorizontal="12sp"
+            android:paddingVertical="10sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            android:textColorHint="#00695C"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textMail"
+            app:layout_constraintVertical_bias="0.031" />
+
+        <TextView
+            android:id="@+id/textPassword"
+            android:layout_width="225sp"
+            android:layout_height="40sp"
+            android:layout_margin="10sp"
+            android:layout_marginTop="8sp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="start"
+            android:text="@string/password"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextMail" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="351sp"
+            android:layout_height="52sp"
+            android:layout_margin="15sp"
+            android:autofillHints=""
+            android:background="@drawable/round_corner"
+            android:ems="10"
+            android:text="@={loginViewModel.passwordLiveData}"
+            android:hint="@string/mock_password"
+            android:inputType="textPassword"
+            android:minHeight="48sp"
+            android:paddingHorizontal="12sp"
+            android:paddingVertical="10sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPassword"
+            app:layout_constraintVertical_bias="0.031"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/SignUpButton"
+            android:layout_width="136sp"
+            android:layout_height="58sp"
+            android:background="@drawable/round_corner"
+            android:paddingHorizontal="12sp"
+            android:paddingVertical="2sp"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeStepGranularity="1sp"
+            android:onClick="@{() -> loginViewModel.verifyUser()}"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButtonGuideline"
+            app:layout_constraintVertical_bias="0.642" />
+
+        <Button
+            android:id="@+id/RegisterButton"
+            android:layout_width="133sp"
+            android:layout_height="45sp"
+            android:backgroundTint="@color/cardview_light_background"
+            android:paddingHorizontal="5sp"
+            android:paddingVertical="5sp"
+            android:text="@string/registrate"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="15sp"
+            android:autoSizeStepGranularity="1sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButtonGuideline"
+            app:layout_constraintVertical_bias="0.859" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

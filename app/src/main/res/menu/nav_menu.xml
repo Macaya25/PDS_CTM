@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/search_match_navigation"
+        android:title="@string/nav_home"
+        android:icon="@drawable/ic_magnifying_glass"/>
+
+    <item android:id="@+id/organized_match_navigation"
+        android:title="@string/nav_organize"
+        android:icon="@drawable/ic_document"/>
+
+    <item android:id="@+id/match_to_play_navigation"
+        android:title="@string/nav_to_play"
+        android:icon="@drawable/ic_hourglass"/>
+
+    <item android:id="@+id/finished_match_navigation"
+        android:title="@string/nav_finished"
+        android:icon="@drawable/ic_graphic"/>
+
+    <item android:id="@+id/profile_navigation"
+        android:title="Profile"
+        android:icon="@drawable/ic_user_silhouette"/>
+
+
+</menu>

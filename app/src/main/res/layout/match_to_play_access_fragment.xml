@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginAccessFragment">
+
+    <data>
+        <variable
+            name="matchToPlayFragment"
+            type="cl.uandes.pichangapp.ui.viewmodel.MatchToPlayViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="407dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <View
+                android:layout_width="300sp"
+                android:layout_height="2sp"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20sp"
+                android:background="#000000" />
+
+            <Button
+                android:id="@+id/FilterInToPlayButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginBottom="15sp"
+                android:background="@drawable/ic_filter"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="65sp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/this_week"
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_marginStart="10sp"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:text="@string/proximas"
+                android:textColor="@color/black"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="83dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:background="#000000"
+                tools:layout_editor_absoluteX="9dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/Guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="585dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/resultLisThisWeek"
+                android:layout_width="match_parent"
+                android:layout_height="651sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/Guideline" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_alignParentEnd="true"
+
+            >
+
+            <Button
+                android:id="@+id/mapButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_corner"
+                android:text="@string/map"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

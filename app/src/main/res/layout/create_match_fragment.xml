@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="createMatchViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.CreateMatchViewModel" />
+    </data>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Register1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/loginTitleGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="715dp" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/loginButtonGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <TextView
+            android:id="@+id/textFecha"
+            android:layout_width="225dp"
+            android:layout_height="40sp"
+            android:layout_margin="10sp"
+            android:layout_marginTop="55sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-black"
+            android:gravity="start"
+            android:text="@string/fecha"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButtonGuideline"
+
+            />
+
+
+        <Button
+            android:id="@+id/editFecha"
+            android:layout_width="355dp"
+            android:layout_height="59dp"
+            android:layout_margin="15sp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/round_corner"
+            android:clickable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@null"
+            android:inputType="textEmailAddress"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/textHora"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFecha"
+            app:layout_constraintVertical_bias="0.031"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textHora"
+            android:layout_width="225dp"
+            android:layout_height="40sp"
+            android:layout_margin="10sp"
+            android:layout_marginTop="8dp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-black"
+            android:gravity="start"
+            android:text="@string/hora"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editFecha" />
+
+
+        <Button
+            android:id="@+id/editTextHora"
+            android:layout_width="355dp"
+            android:layout_height="59dp"
+            android:layout_margin="15sp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:autofillHints=""
+            android:background="@drawable/round_corner"
+            android:ems="10"
+            android:hint="@null"
+            android:inputType="text|date"
+            android:minHeight="48dp"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            android:textSize="100sp"
+            app:layout_constraintBottom_toTopOf="@+id/textLugar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textHora"
+            app:layout_constraintVertical_bias="0.031"
+            tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textLugar"
+            android:layout_width="323dp"
+            android:layout_height="42dp"
+            android:layout_margin="10sp"
+            android:layout_marginTop="8dp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-black"
+            android:gravity="start"
+            android:text="@string/lugar"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.42"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextHora" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextLugar"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="362dp"
+            android:layout_height="59dp"
+            app:boxBackgroundColor="#abe4d3"
+            app:boxCornerRadiusBottomEnd="20sp"
+            app:boxCornerRadiusBottomStart="20sp"
+            app:boxCornerRadiusTopEnd="20sp"
+            app:boxCornerRadiusTopStart="20sp"
+            app:boxStrokeColor="#abe4d3"
+            app:boxStrokeWidth="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.42"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLugar">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView3"
+                android:layout_width="361dp"
+                android:layout_height="59dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:inputType="none"
+                android:text="@={createMatchViewModel.createLocationOfMatchTeamLiveData}"
+                android:textColor="@color/black" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/textDescripcion"
+            android:layout_width="323dp"
+            android:layout_height="42dp"
+            android:layout_margin="10sp"
+            android:layout_marginTop="8dp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-black"
+            android:gravity="start"
+            android:text="@string/descripcion"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.42"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLugar" />
+
+
+        <EditText
+            android:id="@+id/editTextDescripcion"
+            android:layout_width="355dp"
+            android:layout_height="59dp"
+            android:layout_margin="15sp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:autofillHints=""
+            android:background="@drawable/round_corner"
+            android:ems="10"
+            android:hint="@null"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingHorizontal="12sp"
+            android:paddingVertical="18sp"
+            android:text="@={createMatchViewModel.createDescriptionOfMatchTeamLiveData}"
+            android:textColor="@color/black"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDescripcion"
+            tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/CreateMatchButton"
+            android:layout_width="64dp"
+            android:layout_height="56dp"
+            android:background="@drawable/ic_add"
+            android:onClick="@{() -> createMatchViewModel.createPichanga()}"
+            android:paddingHorizontal="12sp"
+            android:paddingVertical="20sp"
+            android:textSize="20sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDescripcion"
+            app:layout_constraintVertical_bias="0.107" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+</layout>

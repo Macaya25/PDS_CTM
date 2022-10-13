@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="finalViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.FinalViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5sp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="300sp"
+            android:layout_height="2sp"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20sp"
+            android:background="#000000" />
+
+        <Button
+            android:id="@+id/FilterInFinishedButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="15sp"
+            android:background="@drawable/ic_filter"
+            android:textSize="20sp"
+            app:backgroundTint="@null"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/resultListView"
+        android:layout_width="match_parent"
+        android:layout_height="651sp"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="4sp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+ />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

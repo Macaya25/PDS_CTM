@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/organized_match_navigation"
+    app:startDestination="@id/organizedMatchAccessFragment">
+    <fragment
+        android:id="@+id/organizedMatchAccessFragment"
+        android:name="cl.uandes.pichangapp.OrganizedMatchAccessFragment"
+        android:label="Pichanga App"
+         >
+        <action
+            android:id="@+id/action_organizedMatchAccessFragment_to_expandOrganizedInformationFragment"
+            app:destination="@id/expandOrganizedInformationFragment" />
+        <action
+            android:id="@+id/action_organizedMatchAccessFragment_to_organizedFilterFragment2"
+            app:destination="@id/organizedFilterFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/expandOrganizedInformationFragment"
+        android:name="cl.uandes.pichangapp.OrganizedMatchDetailsFragment"
+         >
+        <action
+            android:id="@+id/action_expandOrganizedInformationFragment_to_rivalInformationFragment3"
+            app:destination="@id/rivalInformationFragment3" />
+        <argument
+            android:name="mail"
+            app:argType="string"
+            />
+
+        <action
+            android:id="@+id/action_expandOrganizedInformationFragment_to_organizedMatchAccessFragment"
+            app:destination="@id/organizedMatchAccessFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/rivalInformationFragment3"
+        android:name="cl.uandes.pichangapp.RivalInformationFragment"
+         />
+    <fragment
+        android:id="@+id/organizedFilterFragment2"
+        android:name="cl.uandes.pichangapp.OrganizedFilterFragment"
+         />
+</navigation>

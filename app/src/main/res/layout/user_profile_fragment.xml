@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="profileViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.ProfileViewModel" />
+    </data>
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/LoginFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10sp">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+
+            <TextView
+                android:id="@+id/textTitleProfile"
+                android:layout_width="225sp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2sp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="@string/profile"
+                android:textColor="@color/black"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeStepGranularity="1sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="120dp"
+                tools:layout_editor_absoluteY="88dp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textTeamName"
+            android:layout_width="343dp"
+            android:layout_height="49dp"
+            android:layout_margin="5sp"
+            android:layout_marginTop="0sp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="start"
+            android:text="@string/nombre_equipo"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.308"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/team_image" />
+
+        <TextView
+            android:id="@+id/textTeamNameBackground"
+            android:layout_width="354dp"
+            android:layout_height="52dp"
+            android:layout_margin="15sp"
+            android:layout_marginTop="0dp"
+            android:paddingHorizontal="15sp"
+            android:paddingVertical="10sp"
+            android:background="@drawable/round_corner"
+            android:gravity="start"
+            android:text="@{profileViewModel.nameLiveData}"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTeamName" />
+
+        <TextView
+            android:id="@+id/textTeamMail"
+            android:layout_width="343dp"
+            android:layout_height="49dp"
+            android:layout_margin="5sp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="start"
+            android:text="@string/mail_de_equipo"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.308"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTeamNameBackground" />
+
+        <TextView
+            android:id="@+id/textTeamMailBackground"
+            android:layout_width="354dp"
+            android:layout_height="52dp"
+            android:layout_margin="10sp"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="15sp"
+            android:paddingVertical="10sp"
+            android:background="@drawable/round_corner"
+            android:gravity="start"
+            android:text="@{profileViewModel.emailLiveData}"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTeamMail" />
+
+        <TextView
+            android:id="@+id/textTeamCategory"
+            android:layout_width="343dp"
+            android:layout_height="49dp"
+            android:layout_margin="5sp"
+            android:layout_marginTop="145dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="start"
+            android:text="@string/categoria_de_equipo"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTeamMailBackground" />
+
+        <TextView
+            android:id="@+id/textTeamCategoryBackground"
+            android:layout_width="354dp"
+            android:layout_height="52dp"
+            android:layout_margin="10sp"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="15sp"
+            android:paddingVertical="10sp"
+            android:background="@drawable/round_corner"
+            android:gravity="start"
+            android:text="@{profileViewModel.categoryLiveData}"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeStepGranularity="1sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.368"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTeamCategory" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/team_image"
+            android:layout_width="wrap_content"
+            android:layout_height="109dp"
+            android:src="@drawable/extra_logo_chile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <Button
+            android:id="@+id/signOutButton"
+
+            android:layout_width="136dp"
+            android:layout_height="58dp"
+            android:onClick="@{() -> profileViewModel.safedelete()}"
+            android:background="@drawable/round_corner"
+            android:paddingHorizontal="12sp"
+            android:paddingVertical="0.1sp"
+            android:text="@string/sign_out"
+            android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeStepGranularity="1sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTeamCategoryBackground"
+ />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+</layout>

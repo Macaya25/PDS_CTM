@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginAccessFragment">
+
+    <data>
+        <variable
+            name="rivalViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.RivalViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30sp"
+    android:layout_marginStart="20sp"
+    android:layout_marginEnd="20sp"
+    android:layout_marginBottom="30sp">
+
+    <RelativeLayout
+        android:id="@+id/expandaayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_corner"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ImageTeam"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/extra_logo_chile" />
+
+        <TextView
+            android:id="@+id/NameTeam"
+            android:layout_width="348dp"
+            android:layout_height="30sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="120sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="262sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="@={rivalViewModel.nameLiveData}"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textTotal"
+            android:layout_width="100sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="161dp"
+            android:layout_marginEnd="20sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="Totales: "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TotalMatches"
+            android:layout_width="70sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="120sp"
+            android:layout_marginTop="161dp"
+            android:layout_marginEnd="20sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="@={rivalViewModel.totalLiveData}" />
+
+        <TextView
+            android:id="@+id/Victories1"
+            android:layout_width="100sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="20sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="Victorias: "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Ties"
+            android:layout_width="70sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="120sp"
+            android:layout_marginTop="243dp"
+            android:layout_marginEnd="20sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="@={rivalViewModel.tiesLiveData}" />
+
+        <TextView
+            android:id="@+id/textEmpate"
+            android:layout_width="100sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="242dp"
+            android:layout_marginEnd="20sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="Empates:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Victories"
+            android:layout_width="70sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="120sp"
+            android:layout_marginTop="201dp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="15sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="@={rivalViewModel.victoriesLiveData}" />
+
+        <TextView
+            android:id="@+id/textPerdidas"
+            android:layout_width="100sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="280dp"
+            android:layout_marginEnd="20sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="Perdidas:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Lose"
+            android:layout_width="100sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="120sp"
+            android:layout_marginTop="280dp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="15sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="@={rivalViewModel.losesLiveData}" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/finished_match_navigation"
+    app:startDestination="@id/finishedMatchAccessFragment">
+    <fragment
+        android:id="@+id/finishedMatchAccessFragment"
+        android:name="cl.uandes.pichangapp.FinishedMatchAccessFragment"
+
+        tools:layout="@layout/finished_match_access_fragment">
+        <action
+            android:id="@+id/action_finishedMatchAccessFragment_to_expandMatchResultFragment"
+            app:destination="@id/expandMatchResultFragment" />
+        <action
+            android:id="@+id/action_finishedMatchAccessFragment_to_menuMatchEndFragment"
+            app:destination="@id/menuMatchEndFragment" />
+        <action
+            android:id="@+id/action_finishedMatchAccessFragment_to_expandMatchWithoutFragment3"
+            app:destination="@id/expandMatchWithoutFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/expandMatchResultFragment"
+        android:name="cl.uandes.pichangapp.ExpandMatchResultFragment"
+        tools:layout="@layout/expand_match_result_fragment"
+        >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/menuMatchEndFragment"
+        android:name="cl.uandes.pichangapp.EndedMatchFragment"
+        tools:layout="@layout/menu_match_end_fragment"
+         />
+    <fragment
+        android:id="@+id/expandMatchWithoutFragment3"
+        android:name="cl.uandes.pichangapp.ExpandMatchWithoutFragment"
+        android:label="ExpandMatchWithoutFragment"
+        tools:layout="@layout/expand_match_without_results_fragment"/>
+    <argument
+        android:name="id"
+        app:argType="integer" />
+</navigation>

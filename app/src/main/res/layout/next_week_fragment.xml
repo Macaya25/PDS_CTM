@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.Extra.NextWeekFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="5sp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/this_week_2"
+        android:layout_width="377dp"
+        android:layout_height="27dp"
+        android:text="@string/prox_semana"
+        android:textColor="@color/black"
+        android:layout_marginStart="10sp"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="404dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeStepGranularity="1sp"/>
+
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="2sp"
+    android:layout_marginStart="10sp"
+    android:background="#000000"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="438dp" />
+
+    </LinearLayout>
+</FrameLayout>

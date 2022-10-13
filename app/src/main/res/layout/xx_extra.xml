@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130sp">
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutPi"
+        android:layout_width="388dp"
+        android:layout_height="109dp"
+        android:background="@drawable/round_corner"
+        android:orientation="vertical"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15sp"
+            android:src="@drawable/extra_logo_chile" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="5sp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="Fecha:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="5sp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="10/09/2022"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="42sp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="5sp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="Hora:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="42sp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="5sp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="20:00"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="69sp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="5sp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="Lugar:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="69sp"
+            android:layout_marginEnd="29dp"
+            android:layout_marginRight="5sp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="Bernardo Larrain "
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeStepGranularity="1sp"/>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

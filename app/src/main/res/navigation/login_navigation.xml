@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/loginAccessFragment">
+
+    <fragment
+        android:id="@+id/loginAccessFragment"
+        android:name="cl.uandes.pichangapp.LoginAccessFragment"
+        android:label="Pichanga App"
+        tools:layout="@layout/fragment_login_access" >
+        <action
+            android:id="@+id/action_loginAccessFragment_to_search_match_navigation"
+            app:destination="@id/search_match_navigation"
+            app:popUpTo="@+id/loginAccessFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_loginAccessFragment_to_registerAccess01Fragment"
+            app:destination="@id/registerAccess01Fragment" />
+    </fragment>
+    <include app:graph="@navigation/search_match_navigation" />
+    <fragment
+        android:id="@+id/registerAccess01Fragment"
+        android:name="cl.uandes.pichangapp.RegisterAccess01Fragment"
+        >
+        <action
+            android:id="@+id/action_registerAccess01Fragment_to_search_match_navigation"
+            app:destination="@id/search_match_navigation" />
+    </fragment>
+</navigation>

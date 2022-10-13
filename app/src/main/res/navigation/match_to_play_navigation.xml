@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/match_to_play_navigation"
+    app:startDestination="@id/matchToPlayAccessFragment">
+    <fragment
+        android:id="@+id/matchToPlayAccessFragment"
+        android:name="cl.uandes.pichangapp.MatchToPlayAccessFragment"
+        android:label="Pichanga App"
+         >
+        <action
+            android:id="@+id/action_matchToPlayAccessFragment_to_expandToPlayFragment"
+            app:destination="@id/expandToPlayFragment" />
+        <action
+            android:id="@+id/action_matchToPlayAccessFragment_to_filterMenuParticipatingFragment"
+            app:destination="@id/filterMenuParticipatingFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/expandToPlayFragment"
+        android:name="cl.uandes.pichangapp.ExpandToPlayFragment"
+         >
+        <action
+            android:id="@+id/action_expandToPlayFragment_to_rivalInformationFragment2"
+            app:destination="@id/rivalInformationFragment2" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/rivalInformationFragment2"
+        android:name="cl.uandes.pichangapp.RivalInformationFragment">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterMenuParticipatingFragment"
+        android:name="cl.uandes.pichangapp.ui.view.filter.FilterMenuParticipatingFragment"
+         />
+</navigation>

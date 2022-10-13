@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="finalViewModel"
+            type="cl.uandes.pichangapp.ui.viewmodel.FinalViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30sp"
+    android:layout_marginStart="20sp"
+    android:layout_marginEnd="20sp"
+    android:layout_marginBottom="30sp">
+
+    <RelativeLayout
+        android:id="@+id/expandLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/round_corner"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ImageTeam1"
+            android:layout_width="80sp"
+            android:layout_height="70sp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/extra_logo_chile" />
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="163sp"
+            android:layout_height="50sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="4sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="5sp"
+            android:autoSizeMaxTextSize="50sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="@{finalViewModel.resultTeamLiveData}"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ImageTeam2"
+            android:layout_width="80sp"
+            android:layout_height="70sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15sp"
+            android:layout_marginEnd="20sp"
+            android:src="@drawable/extra_logo_chelsea" />
+
+
+        <TextView
+            android:id="@+id/NameTeam1"
+            android:layout_width="140sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="100sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="262sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="@{finalViewModel.organizerTeamTeamLiveData}"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textVs"
+            android:layout_width="40sp"
+            android:layout_height="50sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="100sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="262sp"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="@string/v_s"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/NameTeam2"
+            android:layout_width="140sp"
+            android:layout_height="50sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="100sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="262sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="@{finalViewModel.rivalTeamLiveData}"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textDay"
+            android:layout_width="70sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="20sp"
+            android:text="@string/text_day"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeStepGranularity="1sp"/>
+
+        <TextView
+            android:id="@+id/DayOfMatch"
+            android:layout_width="400sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="90sp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="20sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="@{finalViewModel.dayOfMatchTeamLiveData}" />
+
+        <TextView
+            android:id="@+id/textHour"
+            android:layout_width="70sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="20sp"
+            android:text="@string/text_hour"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeStepGranularity="1sp"/>
+
+        <TextView
+            android:id="@+id/HourOfMatch"
+            android:layout_width="400sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="90sp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="20sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="@{finalViewModel.hourOfMatchTeamLiveData}" />
+
+        <TextView
+            android:id="@+id/textLocation"
+            android:layout_width="70sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="230dp"
+            android:layout_marginEnd="20sp"
+            android:text="@string/text_location"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeStepGranularity="1sp"/>
+
+        <TextView
+            android:id="@+id/LocationOfMatch"
+            android:layout_width="400sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="90sp"
+            android:layout_marginTop="230dp"
+            android:layout_marginEnd="20sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="@{finalViewModel.locationOfMatchTeamLiveData}" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="331dp"
+            android:layout_height="78dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="268dp"
+            android:layout_marginEnd="20sp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="120sp"
+            android:layout_height="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="348dp"
+            android:layout_marginEnd="20sp"
+            android:text="@string/text_description"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeStepGranularity="1sp"/>
+
+        <TextView
+            android:id="@+id/DescriptionOfMatch"
+            android:layout_width="350sp"
+            android:layout_height="100sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="377dp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="15sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:text="@{finalViewModel.descriptionOfMatchTeamLiveData}" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
